@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title Customers
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+  body
+    .container
+      h1 Customers
+      table.table
+        thead
+          tr
+            th First name
+            th Last name
+            th Email
+            th Phone
+        tbody
+          each customer in customers
+            tr
+              td= customer.firstname
+              td= customer.lastname
+              td= customer.email
+              td= customer.phone
+      a.btn.btn-primary(href='/add') Add a customer

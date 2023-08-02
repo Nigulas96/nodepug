@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title Add a customer
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+  body
+    .container
+      h1 Add a customer
+      form(action='/add', method='post')
+        .form-group
+          label(for='firstname') First name
+          input#firstname.form-control(type='text', name='firstname')
+        .form-group
+          label(for='lastname') Last name
+          input#lastname.form-control(type='text', name='lastname')
+        .form-group
+          label(for='email') Email
+          input#email.form-control(type='text', name='email')
+        .form-group
+          label(for='phone') Phone
+          input#phone.form-control(type='text', name='phone')
+        .form-group
+          input.btn.btn-primary(type='submit', value='Add customer')
